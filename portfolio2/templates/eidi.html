@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="eidi active" data-page="eidi" data-razorpay-key="{{ razorpay_key_id }}">
+  <header>
+    <h2 class="h2 article-title">Where's My Eidi?</h2>
+  </header>
+
+  <section class="donation-section">
+    <div class="payment-container">
+
+      <form id="payment-form" class="payment-form">
+        <div class="form-group">
+          <label for="amount">Donation Amount (₹)</label>
+          <div class="amount-input-wrapper">
+            <span class="currency-symbol">₹</span>
+            <input type="number" id="amount" name="amount" min="1" placeholder="Enter amount" required>
+          </div>
+        </div>
+
+        <div class="quick-amounts">
+          <button type="button" class="amount-preset" data-amount="100">₹100</button>
+          <button type="button" class="amount-preset" data-amount="500">₹500</button>
+          <button type="button" class="amount-preset" data-amount="1000">₹1000</button>
+        </div>
+
+        <button type="button" id="pay-button" class="donate-button">
+          Donate ₹<span id="amount-value">0</span>
+        </button>
+      </form>
+    </div>
+  </section>
+</article>
+{% endblock %}

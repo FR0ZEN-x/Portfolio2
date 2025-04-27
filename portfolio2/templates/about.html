@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<article class="about active" data-page="about">
+  <header>
+    <h2 class="h2 article-title">About me</h2>
+  </header>
+
+  <section class="about-text">
+    <p>
+      I'm Shaik Munawar, a dedicated full-stack developer with a strong interest in building dynamic web applications and integrating machine learning into real-world solutions. With a solid foundation in computer science and hands-on experience in both front-end and back-end technologies, I enjoy designing intuitive user experiences and engineering efficient, scalable systems that solve real problems.
+    </p>
+    Outside of coding, I'm driven by curiosity and creativity—always exploring new tools, trends, and ideas. Whether it's refining a side project, learning a new framework, or collaborating on something impactful, I love the process of turning ideas into digital reality. Let's connect and build something great together.
+    <p>
+    </p>
+  </section>
+
+  <!-- service -->
+  <section class="service">
+    <h3 class="h3 service-title">What I'm doing</h3>
+    <ul class="service-list">
+      <li class="service-item">
+        <div class="service-icon-box">
+          <img src="{{ url_for('static', filename='images/icon-dev.svg') }}" alt="Web development icon" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">Web development</h4>
+          <p class="service-item-text">
+            High-quality development of sites at the professional level.
+          </p>
+        </div>
+      </li>
+
+      <li class="service-item">
+        <div class="service-icon-box">
+          <img src="{{ url_for('static', filename='images/icon-data.svg') }}" alt="data science icon" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">Data Science</h4>
+          <p class="service-item-text">
+            Extracting insights from data using statistical analysis, data visualization, and predictive modeling.
+          </p>
+        </div>
+      </li>
+
+      <li class="service-item">
+        <div class="service-icon-box">
+          <img src="{{ url_for('static', filename='images/icon-ml.svg') }}" alt="machine learning icon" width="40">
+        </div>
+        <div class="service-content-box">
+          <h4 class="h4 service-item-title">Machine Learning</h4>
+          <p class="service-item-text">
+            Designing and deploying intelligent models to automate tasks and solve real-world problems.
+          </p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- testimonials -->
+  {% include 'testimonials.html' %}
+</article>
+{% endblock %}

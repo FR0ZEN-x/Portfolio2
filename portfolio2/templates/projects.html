@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<article class="projects" data-page="projects">
+  <header>
+    <h2 class="h2 article-title">Projects</h2>
+  </header>
+
+  <section class="projects">
+    <ul class="filter-list">
+      <li class="filter-item">
+        <button class="active" data-filter-btn>All</button>
+      </li>
+      <li class="filter-item">
+        <button data-filter-btn>AI & ML</button>
+      </li>
+      <li class="filter-item">
+        <button data-filter-btn>Data Science</button>
+      </li>
+      <li class="filter-item">
+        <button data-filter-btn>Web development</button>
+      </li>
+    </ul>
+
+    <!-- Filter select box would go here -->
+
+    <ul class="project-list">
+      <li class="project-item active" data-filter-item data-category="ai & ml">
+        <a href="https://github.com/FR0ZEN-x/Pet-Care">
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+            <img src="{{ url_for('static', filename='images/project-1.png') }}" alt="PetCare" loading="lazy">
+          </figure>
+          <h3 class="project-title">PetCare</h3>
+          <p class="project-category">AI & ML</p>
+        </a>
+      </li>
+      <!-- <li class="project-item active" data-filter-item data-category="data science">
+        <a href="#">
+
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+
+            <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
+          </figure>
+
+          <h3 class="project-title">brawlhalla</h3>
+
+          <p class="project-category">Data Science</p>
+
+        </a>
+      </li> -->
+
+      <li class="project-item active" data-filter-item data-category="web development">
+        <a href="https://github.com/FR0ZEN-x/Amazon-Clone">
+
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+
+            <img src="{{ url_for('static', filename='images/project-2.png') }}" alt="PetCare" loading="lazy">
+          </figure>
+
+          <h3 class="project-title">Amazon Clone</h3>
+
+          <p class="project-category">Web development</p>
+
+        </a>
+      </li>
+
+      <li class="project-item active" data-filter-item data-category="web development">
+        <a href="https://github.com/FR0ZEN-x/Flask-Market">
+
+          <figure class="project-img">
+            <div class="project-item-icon-box">
+              <ion-icon name="eye-outline"></ion-icon>
+            </div>
+
+            <img src="{{ url_for('static', filename='images/project-3.png') }}" alt="PetCare" loading="lazy">
+          </figure>
+
+          <h3 class="project-title">Flask Market</h3>
+
+          <p class="project-category">Web development</p>
+
+        </a>
+      </li>
+
+    </ul>
+  </section>
+</article>
+{% endblock %}

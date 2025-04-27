@@ -1,0 +1,127 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<article class="resume" data-page="resume">
+  <header>
+    <h2 class="h2 article-title">Resume</h2>
+  </header>
+
+  <section class="timeline">
+    <div class="title-wrapper">
+      <div class="icon-box">
+        <ion-icon name="book-outline"></ion-icon>
+      </div>
+      <h3 class="h3">Education</h3>
+    </div>
+
+    <ol class="timeline-list">
+      <li class="timeline-item">
+        <h4 class="h4 timeline-item-title">Muffakham Jah College of Engineering and Technology</h4>
+        <span>2023 — Present</span>
+        <p class="timeline-text">
+          Currently pursuing a B.Tech in Artificial Intelligence and Data Science, focusing on web development, machine learning, and data science. Actively participating in hackathons and tech events to challenge my creativity and problem-solving skills.
+        </p>
+      </li>
+
+      <li class="timeline-item">
+        <h4 class="h4 timeline-item-title">Mahaveer Institute of Science and Technology</h4>
+        <span>2020 — 2023</span>
+        <p class="timeline-text">
+          Completed my Diploma in Computer Science, gaining a solid foundation in programming, data structures, and software development.
+        </p>
+      </li>
+
+      <li class="timeline-item">
+        <h4 class="h4 timeline-item-title">Gowtham Model School</h4>
+        <span>2014 — 2020</span>
+        <p class="timeline-text">
+          Completed my school education with a focus on science and mathematics, which laid the groundwork for my interest in technology and computer science.
+        </p>
+      </li>
+    </ol>
+  </section>
+
+  <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">ACM tech lead </h4>
+
+              <span>2024 — Present</span>
+
+              <p class="timeline-text">
+                Involved in ACM at MJCET, organizing tech events and workshops, collaborating on projects, and enhancing my leadership, teamwork, and technical skills while contributing to the tech community.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Industrial Trainee</h4>
+
+              <span>Jun 2022 — Dec 2022</span>
+
+              <p class="timeline-text">
+                Worked as an Industrial Trainee at Pixel Quest, gaining hands-on experience in web development and contributing to real-world projects.
+              </p>
+
+            </li>
+
+          </ol>
+
+  </section>
+
+  <section class="skill">
+    <h3 class="h3 skills-title">My skills</h3>
+    <ul class="skills-list content-card">
+      <li class="skills-item">
+        <div class="title-wrapper">
+          <h5 class="h5">Web development</h5>
+          <data value="80">80%</data>
+        </div>
+        <div class="skill-progress-bg">
+          <div class="skill-progress-fill" style="width: 80%;"></div>
+        </div>
+      </li>
+      <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Teamwork</h5>
+                <data value="90">60%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 60%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Machine Learing</h5>
+                <data value="50">20%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 20%;"></div>
+              </div>
+
+            </li>
+    </ul>
+  </section>
+
+  {% include 'tech_stack.html' %}
+</article>
+{% endblock %}
