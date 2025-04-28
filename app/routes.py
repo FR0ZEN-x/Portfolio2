@@ -1,5 +1,8 @@
-from flask import render_template, jsonify, request
-from portfolio2 import app, razorpay_client
+from flask import render_template
+from app import app
+import hmac
+import hashlib
+import os
 
 @app.route('/')
 @app.route('/about')
@@ -19,28 +22,10 @@ def contact():
     return render_template('contact.html', active_page='contact')
 
 
-@app.route('/create-order', methods=['POST'])
-def create_order():
-    # Get the amount from the request
-    data = request.get_json()
-
-    # Default to 50000 paise if no amount is provided
-    amount = data.get('amount', 50000) if data else 50000
-
-    order_data = {
-        'amount': amount,
-        'currency': 'INR',
-        'payment_capture': '1',  # 1 for auto capture
-    }
-
-    # Create Razorpay order
-    order = razorpay_client.order.create(data=order_data)
-
-    return jsonify(order)
-
 @app.route('/eidi')
 def eidi():
-    return render_template('eidi.html', razorpay_key_id=app.config['RAZORPAY_KEY_ID'])
+    """Render the Eidi donation page with Razorpay key"""
+    return render_template('eidi.html', active_page='eidi')
 
 @app.route('/blog')
 def blog():

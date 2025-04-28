@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<article class="eidi active" data-page="eidi" data-razorpay-key="{{ razorpay_key_id }}">
+  <header>
+    <h2 class="h2 article-title">Where's My Eidi?</h2>
+  </header>
+<section class="donation-section">
+
+    <!-- Custom styled form -->
+    <div class="donation-form">
+      <div class="form-btn" id="custom-razorpay-btn" style="cursor: pointer; text-align: center; position: relative; overflow: hidden;">
+        <ion-icon name="gift-outline"></ion-icon>
+        <span>Send Eidi</span>
+        <!-- Hidden original Razorpay button -->
+        <div style="position: absolute; opacity: 0; top: 0; left: 0; width: 100%; height: 100%;">
+          <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_QO9wTEpZMMS1Gn" async></script></form>
+        </div>
+      </div>
+    </div>
+</section>
+</article>
+{% endblock %}

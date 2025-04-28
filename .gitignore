@@ -7,7 +7,7 @@ __pycache__/
 env/
 venv/
 ENV/
-build/
+buiupdate .gitignore and Dockerfileld/
 develop-eggs/
 dist/
 downloads/

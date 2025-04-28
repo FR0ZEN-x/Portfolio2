@@ -11,10 +11,6 @@ class Config:
     DEBUG = False
     TESTING = False
 
-    # Razorpay credentials
-    RAZORPAY_KEY_ID = os.getenv('RAZORPAY_KEY_ID')
-    RAZORPAY_KEY_SECRET = os.getenv('RAZORPAY_KEY_SECRET')
-
     # Static and template folders
     STATIC_FOLDER = 'static'
     TEMPLATE_FOLDER = 'templates'
@@ -47,11 +43,3 @@ config = {
     'production': ProductionConfig,
     'default': DevelopmentConfig
 }
-
-# Initialize Razorpay client after config classes are defined
-rp_client = razorpay.Client(
-    auth=(
-        Config.RAZORPAY_KEY_ID,
-        Config.RAZORPAY_KEY_SECRET
-    )
-)

@@ -373,94 +373,17 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 })();
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Get elements
-    const amountInput = document.getElementById('amount');
-    const amountValue = document.getElementById('amount-value');
-    const payButton = document.getElementById('pay-button');
-    const presetButtons = document.querySelectorAll('.amount-preset');
+  // Script to trigger the hidden Razorpay button when our custom button is clicked
+  document.addEventListener('DOMContentLoaded', function() {
+    const customBtn = document.getElementById('custom-razorpay-btn');
 
-    // Update amount display when input changes
-    amountInput.addEventListener('input', function() {
-      amountValue.textContent = this.value || '0';
-      // Remove active class from all preset buttons
-      presetButtons.forEach(btn => btn.classList.remove('active'));
-    });
-
-    // Handle preset amount buttons
-    presetButtons.forEach(button => {
-      button.addEventListener('click', function() {
-        const amount = this.dataset.amount;
-        amountInput.value = amount;
-        amountValue.textContent = amount;
-
-        // Toggle active class
-        presetButtons.forEach(btn => btn.classList.remove('active'));
-        this.classList.add('active');
-      });
-    });
-
-    // Handle pay button click
-    payButton.addEventListener('click', async function(e) {
-      e.preventDefault();
-
-      const amount = amountInput.value;
-      if (!amount || amount <= 0) {
-        alert("Please enter a valid donation amount!");
-        return;
-      }
-
-      try {
-        // Send a request to your backend to create an order
-        const response = await fetch('/create-order', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            amount: amount * 100  // Razorpay needs amount in paise
-          }),
-        });
-
-        const data = await response.json();
-        console.log("Order response:", data);
-
-        if (data.error) {
-          alert("Error: " + data.error);
-          return;
+    customBtn.addEventListener('click', function() {
+      // Short delay to ensure Razorpay script is loaded
+      setTimeout(function() {
+        const razorpayBtn = document.querySelector('.razorpay-payment-button');
+        if (razorpayBtn) {
+          razorpayBtn.click();
         }
-
-        // Get the Razorpay key from the article data attribute
-        const razorpayKey = document.querySelector('article.eidi').dataset.razorpayKey;
-        console.log("Razorpay Key:", razorpayKey);
-
-        const options = {
-          "key": razorpayKey,
-          "amount": data.amount,
-          "currency": "INR",
-          "name": "Support Our Project",
-          "description": "Donation",
-          "order_id": data.id,
-          "handler": function (response) {
-            alert("Payment successful! Thank you for your donation.");
-          },
-          "prefill": {
-            "name": "",
-            "email": ""
-          },
-          "theme": {
-            "color": "#FDB400"
-          }
-        };
-
-        const rzp1 = new Razorpay(options);
-        rzp1.on('payment.failed', function (response) {
-          alert("Payment failed: " + response.error.description);
-        });
-        rzp1.open();
-      } catch (error) {
-        console.error("Payment processing error:", error);
-        alert("An error occurred while processing your payment. Please try again.");
-      }
+      }, 100);
     });
   });
