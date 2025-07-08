@@ -1,6 +1,6 @@
 {
-  "name": "Shaik Munawar",
-  "short_name": "Shaik Munawar",
+  "name": "MyWebSite",
+  "short_name": "MySite",
   "icons": [
     {
       "src": "/images/fevicon.ico/web-app-manifest-192x192.png",
