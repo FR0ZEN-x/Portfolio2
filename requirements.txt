@@ -1,4 +1,5 @@
-alembic==1.14.1
+# requirements.txt
+alembic
 bcrypt==4.2.1
 blinker==1.9.0
 certifi==2025.1.31
@@ -44,9 +45,9 @@ stripe==12.0.1
 threadpoolctl==3.5.0
 typing_extensions==4.12.2
 tzdata==2025.1
-urllib3==2.3.0
 wcwidth==0.2.13
 Werkzeug==3.1.3
 WTForms==3.2.1
 razorpay
+setuptools
 gunicorn
