@@ -1,33 +1,42 @@
-<section class="testimonials">
-  <h3 class="h3 testimonials-title">Gossips</h3>
+<!--
+          - testimonials
+        -->
 
-  <ul class="testimonials-list has-scrollbar">
-    <li class="testimonials-item">
-      <div class="content-card" data-testimonials-item>
-        <figure class="testimonials-avatar-box">
-          <a href="https://www.linkedin.com/in/syed-anas-1aa11a1ab/" target="_blank" class="testimonials-link" data-testimonials-link>
-            <img src="{{ url_for('static', filename='images/avatar-1.png') }}" alt="Anas" width="60" data-testimonials-avatar>
-          </a>
-        </figure>
+        <section class="testimonials">
 
-        <h4 class="h4 testimonials-item-title" data-testimonials-title>Anas</h4>
-        <br>
-        <div class="testimonials-text" data-testimonials-text>
-          <p>
-            "Munawar was instrumental in the success of many ACM's initiatives, especially through his active involvement in hackathons, organizing workshops and technical events. His creativity and hands-on contribution ensured smooth execution and impactful outcomes. His dedication and collaborative spirit made him an invaluable part of the team."
-            <br>
-            — ACM Chairperson
-          </p>
-        </div>
-      </div>
-    </li>
+          <h3 class="h3 testimonials-title">Gossips</h3>
 
-<li class="testimonials-item">
+          <ul class="testimonials-list has-scrollbar">
+
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+
+                <figure class="testimonials-avatar-box">
+                  <a href="https://www.linkedin.com/in/syed-anas-1aa11a1ab/" target="_blank" class="testimonials-link" data-testimonials-link>
+                    <img src="{{ url_for('static', filename='images/avatar-1.png') }}" alt="Anas" width="60" data-testimonials-avatar>
+                  </a>
+                </figure>
+
+
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Anas</h4>
+                <br>
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    “Munawar was instrumental in the success of many ACM’s initiatives, especially through his active involvement in hackathons, organizing workshops and technical events. His creativity and hands-on contribution ensured smooth execution and impactful outcomes. His dedication and collaborative spirit made him an invaluable part of the team.”
+                    <br>
+                    — ACM Chairperson
+                  </p>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="testimonials-item">
               <div class="content-card" data-testimonials-item>
 
                 <figure class="testimonials-avatar-box">
                   <a href="https://www.linkedin.com/in/poorvi-reddy-b6b092296/" target="_blank" class="testimonials-link" data-testimonials-link>
-                    <img src="{{ url_for('static', filename='images/avatar-2.png') }}" alt="Anas" width="60" data-testimonials-avatar>
+            <img src="{{ url_for('static', filename='images/avatar-2.png') }}" alt="Anas" width="60" data-testimonials-avatar>
                   </a>
                 </figure>
 
@@ -51,7 +60,7 @@
 
                 <figure class="testimonials-avatar-box">
                   <a href="https://www.linkedin.com/in/mudassiruddin21/" target="_blank" class="testimonials-link" data-testimonials-link>
-                    <img src="{{ url_for('static', filename='images/avatar-1.png') }}" alt="Anas" width="60" data-testimonials-avatar>
+            <img src="{{ url_for('static', filename='images/avatar-1.png') }}" alt="Anas" width="60" data-testimonials-avatar>
                   </a>
                 </figure>
 
@@ -73,7 +82,7 @@
 
                 <figure class="testimonials-avatar-box">
                   <a href="https://www.linkedin.com/in/mussadiq-najeed-0a332329b/" target="_blank" class="testimonials-link" data-testimonials-link>
-                    <img src="{{ url_for('static', filename='images/avatar-1.png') }}" alt="Anas" width="60" data-testimonials-avatar>
+            <img src="{{ url_for('static', filename='images/avatar-1.png') }}" alt="Anas" width="60" data-testimonials-avatar>
                   </a>
                 </figure>
 
@@ -88,28 +97,44 @@
 
               </div>
             </li>
-  </ul>
-</section>
 
-<div class="modal-container" data-modal-container>
-  <div class="overlay" data-overlay></div>
-  <section class="testimonials-modal">
-    <button class="modal-close-btn" data-modal-close-btn>
-      <ion-icon name="close-outline"></ion-icon>
-    </button>
-    <div class="modal-img-wrapper">
-      <figure class="modal-avatar-box">
-        <img src="{{ url_for('static', filename='images/avatar-1.png') }}" alt="Daniel lewis" width="80" data-modal-img>
-      </figure>
-      <img src="{{ url_for('static', filename='images/icon-quote.svg') }}" alt="quote icon">
-    </div>
-    <div class="modal-content">
-      <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-      <br>
-      <time datetime="2025-04-25">25 April, 2025</time>
-      <div data-modal-text>
-        <p></p>
-      </div>
-    </div>
-  </section>
-</div>
+          </ul>
+
+        </section>
+
+<!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+
+            </div>
+
+            <div class="modal-content">
+
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+              <br>
+              <time datetime="2025-04-25">25 April, 2025</time>
+
+              <div data-modal-text>
+                <p></p>
+              </div>
+
+            </div>
+
+          </section>
+
+        </div>

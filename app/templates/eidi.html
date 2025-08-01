@@ -1,22 +1,95 @@
 {% extends "base.html" %}
 {% block content %}
-<article class="eidi active" data-page="eidi" data-razorpay-key="{{ razorpay_key_id }}">
-  <header>
-    <h2 class="h2 article-title">Where's My Eidi?</h2>
-  </header>
-<section class="donation-section">
+<article class="eidi" data-page="eidi" data-razorpay-key="{{ razorpay_key_id }}">
+        <header>
+          <h2 class="h2 article-title">Where's My Eidi?</h2>
+        </header>
 
-    <!-- Custom styled form -->
-    <div class="donation-form">
-      <div class="form-btn" id="custom-razorpay-btn" style="cursor: pointer; text-align: center; position: relative; overflow: hidden;">
-        <ion-icon name="gift-outline"></ion-icon>
-        <span>Send Eidi</span>
-        <!-- Hidden original Razorpay button -->
-        <div style="position: absolute; opacity: 0; top: 0; left: 0; width: 100%; height: 100%;">
-          <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_QO9wTEpZMMS1Gn" async></script></form>
-        </div>
-      </div>
-    </div>
-</section>
-</article>
+        <section class="donation-section">
+          <div class="donation-card">
+            <div class="donation-icon">
+              <ion-icon name="gift-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3 donation-title">Support My Work</h3>
+
+            <p class="donation-text">
+              Your contribution helps me continue building innovative projects and sharing knowledge with the community.
+              Every bit of support is greatly appreciated!
+            </p>
+
+            <div class="donation-form">
+              <button id="custom-razorpay-btn">
+                <ion-icon name="card-outline"></ion-icon>
+                <span>Send Eidi</span>
+                <!-- Hidden original Razorpay button -->
+                <div style="position: absolute; opacity: 0; top: 0; left: 0; width: 100%; height: 100%;">
+                  <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_QO9wTEpZMMS1Gn" async></script></form>
+                </div>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section class="service">
+          <h3 class="h3 service-title">Ways to Support</h3>
+          <ul class="service-list">
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="heart"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">
+                  Appreciation
+                </h4>
+                <p class="service-item-text">
+                  Show your appreciation for the work and effort put into creating this portfolio.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="code-slash"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">
+                  Project Support
+                </h4>
+                <p class="service-item-text">
+                  Help fund future projects and enable continuous learning and development.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="school"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">
+                  Learning Resources
+                </h4>
+                <p class="service-item-text">
+                  Contribute to acquiring new learning materials, courses, and development tools.
+                </p>
+              </div>
+            </li>
+
+            <li class="service-item">
+              <div class="service-icon-box">
+                <ion-icon name="cafe"></ion-icon>
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">
+                  Coffee Fund
+                </h4>
+                <p class="service-item-text">
+                  Fuel late-night coding sessions and keep the creativity flowing!
+                </p>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
 {% endblock %}
